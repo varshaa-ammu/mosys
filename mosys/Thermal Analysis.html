@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CAE Service - BINIMAYA SOLUTIONS</title>
+    <link rel="stylesheet" href="styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- External styles for FontAwesome (social media icons) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        /* Styling for the header */
+        .site-header {
+            text-align: left; /* Align text to the left */
+            padding: 20px; /* Add padding to the header */
+            background-color: #333;
+            color: #fff;
+        }
+
+        .site-header h1 {
+            margin: 0; /* Remove default margin for h1 */
+        }
+
+        .site-header p {
+            margin: 5px 0; /* Adjust margin for the paragraph */
+        }
+
+        .site-header a {
+            color: #fff; /* Set link color to white */
+            text-decoration: none; /* Remove underline */
+        }
+
+        .site-header a:hover {
+            color: #ddd; /* Change color on hover */
+        }
+
+        .service {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: row;
+        }
+
+        .service h3 {
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .service p {
+            margin-bottom: 10px;
+            color: #666;
+        }
+
+        .service .service-content {
+            flex: 1;
+            padding-right: 20px; /* Add some spacing between image and text on larger screens */
+        }
+
+        .service .service-image {
+            flex: 1;
+            text-align: right; /* Align image to the right */
+            margin-left: 20px; /* Add margin to the left of the image for spacing */
+        }
+
+        .service .service-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            object-fit: cover; /* Ensure the image fills its container */
+        }
+
+        /* Media queries for responsiveness */
+        @media (max-width: 768px) {
+            .service {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .service .service-image {
+                text-align: center;
+                margin-top: 20px;
+                margin-left: 0; /* Remove left margin on smaller screens */
+            }
+
+            .service .service-content {
+                padding-right: 20px; /* Remove right padding on smaller screens */
+                padding-left: 20px; /* Adjust left padding for consistency */
+            }
+        }
+
+        /* Adjust the color of "Mosys" in the footer to white */
+        .site-footer .footer-content p a {
+            color: #fff; /* Set the color to white */
+            text-decoration: none; /* Remove underline */
+        }
+
+        /* Ensure "Mosys" is visible on smaller screens */
+        @media (max-width: 768px) {
+            .site-footer .footer-content {
+                text-align: center; /* Center align the content */
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- Header -->
+<header class="site-header">
+    <div class="container">
+        <h1>CAE Service</h1>
+        <p><a href="Home.html">Home</a> - Thermal Analysis</p>
+    </div>
+</header>
+
+<!-- Image Section -->
+<div class="image-section">
+    <img src="0.jpg" alt="Descriptive Alt Text">
+</div>
+
+<!-- Services Section -->
+<section class="services-section">
+    <div class="container">
+        <h2>Our Services</h2>
+
+        <!--Structural Analysis -->
+        <div class="service">
+            <div class="service-content">
+                <h3>Thermogravimetric Analysis</h3>
+                <p>TGA measures weight loss as a function of temperature in a controlled environment. The sample is weighed at room temperature before testing, and then the mass is monitored for changes as an increasing amount of heat is applied to the sample.</p>
+                <p>The analysis plots the temperature at which each of the components volatilizes. Because TGA identifies multiple points of weight loss, this technique can screen for additives, moisture and filler content within the polymer. It’s also commonly used to test the thermal stability in both solids and liquids.</p>
+            </div>
+            <div class="service-image">
+                <img src="015.jpg" alt="Environment and Product Development">
+            </div>
+        </div>
+
+        <!-- Multibody Dynamics -->
+        <div class="service service-design">
+            <div class="service-image">
+                <img src="016.jpg" alt="Design Service">
+            </div>
+            <div class="service-content">
+                <h3>Thermomechanical Analysis</h3>
+                <p>TMA evaluates physical dimensions, mass, volume, and density change as a function of temperature, time, and applied force. Depending on the testing requirements, the force may change or be constant during the test. Additionally, the temperature regime may be predetermined or based on a feedback signal from the sample. </p>
+                <p>TMA is one of the most common techniques for measuring dimensional changes and solid and liquid materials, such as the coefficient of thermal expansion. It can also determine a material’s softening point, glass transition temperature, shrinkage, and physical changes due to age.</p>
+                <p>Do you want to understand how a material’s physical properties change based on temperature? Thermomechanical analysis (TMA) can provide the answers. </p>
+            </div>
+        </div>
+
+        <!-- Thermal Analysis -->
+        <div class="service">
+            <div class="service-content">
+                <h3> Dielectric Analysis </h3>
+                <p>Are you looking for an option for measuring insulation resistance properties of a material? Dielectric analysis (DEA) might be the answer.</p>
+                <p>DEA is similar to DMA – both analyses subject a substance to a sinusoidal shear strain to quantify deformation resistance under vibratory conditions. The difference is that DEA uses an oscillating electrical field, whereas DMA uses mechanical force.</p>
+                <p>DEA is used to measure insulative properties and identity changes in viscosity and cure states. It is especially effective at measuring invisible in-mold curing necessary for quality components. This technique is frequently used on materials such as resins, paints and adhesives both in the laboratory and in the manufacturing process. </p>
+            </div>
+            <div class="service-image">
+                <img src="017.jpg" alt="CAE Service">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="site-footer">
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <!-- You can add your logo here -->
+            </div>
+            <p>&copy; 2024 Binimaya Solutions Private Limited. Designed by <a href="https://mosys.org" target="_blank">Mosys</a></p>
+            <div class="social-links">
+                <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://www.youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- External scripts for FontAwesome (social media icons) -->
+<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+</body>
+</html>

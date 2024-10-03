@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <title>Company Home Page</title>
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <!-- Ensure responsiveness -->
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous">
+ <link rel="stylesheet" href="styles.css">
+ <style>
+ /* Basic styling for the navbar */
+ .navbar {
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+ background-color: #333;
+ padding: 30px;
+ color: white;
+ }
+
+ .navbar .navbar-top {
+ font-size: 1.5em;
+ font-weight: bold;
+ margin-bottom: 10px;
+ }
+
+ .navbar .navbar-links {
+ display: flex;
+ flex-wrap: wrap;
+ align-items: center;
+ justify-content: flex-end; /* Adjusted to push links to the right */
+ flex: 1; /* Allow navbar links to take remaining space */
+ }
+
+ .navbar a, .navbar input {
+ color: white;
+ text-decoration: none;
+ padding: 10px;
+ }
+
+ .navbar .dropdown {
+ position: relative;
+ }
+
+ .navbar .dropdown-menu, .navbar .dropdown-submenu {
+ display: none;
+ position: absolute;
+ background-color: #444;
+ min-width: 100px;
+ z-index: 1;
+ }
+
+ .navbar .dropdown-menu a, .navbar .dropdown-submenu a {
+ color: white;
+ padding: 10px;
+ display: block;
+ text-decoration: none;
+ }
+
+ .navbar .dropdown:hover .dropdown-menu, .navbar .dropdown-item-with-submenu:hover .dropdown-submenu {
+ display: block;
+ }
+
+ .navbar .dropdown-item-with-submenu {
+ position: relative;
+ }
+
+ .navbar .dropdown-submenu {
+ left: 100%;
+ top: 0;
+ }
+
+ /* Navbar icon */
+ .navbar .toggle-nav {
+ display: none;
+ cursor: pointer;
+ }
+
+ /* Responsive styling */
+ @media (max-width: 768px) {
+ .navbar {
+ flex-direction: column;
+ align-items: flex-start;
+ }
+
+ .navbar .navbar-links {
+ display: none;
+ flex-direction: column;
+ align-items: flex-start;
+ justify-content: flex-start;
+ width: 100%;
+ }
+
+ .navbar .navbar-top {
+ text-align: center;
+ margin-bottom: 20px;
+ }
+
+ .navbar a, .navbar input {
+ display: block;
+ width: 100%;
+ text-align: left;
+ padding: 10px;
+ }
+
+ .navbar .dropdown-menu, .navbar .dropdown-submenu {
+ position: relative;
+ width: 100%;
+ }
+
+ .navbar .dropdown-submenu {
+ left: auto;
+ top: auto;
+ }
+
+ .navbar .dropdown-menu a, .navbar .dropdown-submenu a {
+ padding: 10px;
+ }
+
+ .navbar .dropdown:hover .dropdown-menu, .navbar .dropdown-item-with-submenu:hover .dropdown-submenu {
+ display: none;
+ }
+
+ .navbar .dropdown.active .dropdown-menu, .navbar .dropdown-item-with-submenu.active .dropdown-submenu {
+ display: block;
+ }
+
+ .navbar .toggle-nav {
+ display: block;
+ margin-right: 10px; /* Adjust margin for spacing */
+ }
+
+ .navbar.collapsed .navbar-links {
+ display: flex;
+ }
+
+ .navbar.collapsed .navbar-top {
+ margin-bottom: 10px;
+ }
+ }
+
+ /* Image section styling */
+ .image-section {
+ position: relative;
+ overflow: hidden;
+ }
+
+ .image-section img {
+ width: 100%;
+ display: none;
+ }
+
+ .image-section img.active {
+ display: block;
+ }
+
+ /* Arrow button styling */
+ .arrow {
+ position: absolute;
+ top: 50%;
+ transform: translateY(-50%);
+ background-color: rgba(0, 0, 0, 0.5);
+ color: white;
+ border: none;
+ padding: 10px;
+ cursor: pointer;
+ }
+
+ .arrow.left {
+ left: 10px;
+ }
+
+ .arrow.right {
+ right: 10px;
+ }
+
+ /* Responsive styling for arrows */
+ @media (max-width: 768px) {
+ .arrow {
+ padding: 5px;
+ }
+ }
+
+ 
+ .site-footer {
+ background-color: #333;
+ color: white;
+ padding: 20px 0;
+ text-align: center;
+ }
+
+ .site-footer .container {
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ justify-content: center;
+ }
+
+ .site-footer .footer-content {
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ justify-content: center;
+ }
+
+ .site-footer .footer-logo {
+ margin-bottom: 10px;
+ }
+
+ .site-footer p {
+ margin: 5px 0;
+ }
+
+ .site-footer a {
+ color: white;
+ text-decoration: none;
+ }
+
+ .site-footer .social-links {
+ margin-top: 10px;
+ }
+
+ .site-footer .social-links a {
+ margin: 0 10px;
+ color: white;
+ text-decoration: none;
+ font-size: 1.2em;
+ }
+
+ @media (max-width: 768px) {
+ .site-footer .container {
+ padding: 10px;
+ }
+
+ .site-footer .social-links a {
+ margin: 0 5px;
+ }
+ }
+ ---
+ .industrial-service {
+ display: flex;
+ flex-wrap: wrap;
+ margin: 20px 0;
+ }
+
+ .industrial-service .service-image {
+ flex: 1 1 40%; /* Adjust the flex-basis as needed */
+ max-width: 40%;
+ padding: 10px;
+ box-sizing: border-box;
+ }
+
+ .industrial-service .service-image img {
+ width: 100%;
+ height: auto;
+ display: block;
+ }
+
+ .industrial-service .service-content {
+ flex: 1 1 60%;
+ max-width: 60%;
+ padding: 10px;
+ box-sizing: border-box;
+ }
+
+ @media (max-width: 768px) {
+ .industrial-service {
+ flex-direction: column;
+ }
+
+ .industrial-service .service-image,
+ .industrial-service .service-content {
+ max-width: 100%;
+ flex: 1 1 100%;
+ }
+
+ .industrial-service .service-content {
+ padding-top: 0;
+ }
+ }
+ ----
+ /* Add specific styling for the "Industrial Service" section */
+.industrial-service {
+ display: flex; /* Use flexbox */
+ flex-direction: row; /* Default: flex items arranged in a row */
+ align-items: center; /* Center align items vertically */
+}
+
+.industrial-service .service-image {
+ flex: 1; /* Take up equal space */
+ text-align: left; /* Align image to the left */
+}
+
+.industrial-service .service-content {
+ flex: 1; /* Take up remaining space */
+ padding: 0 30px; /* Add padding for spacing */
+ text-align: left; /* Align text to the left */
+}
+
+.industrial-service .service-image img {
+ max-width: 100%;
+ height: auto;
+ border-radius: 10px;
+ object-fit: cover; /* Ensure the image fills its container */
+}
+
+/* Media query for responsiveness */
+@media (max-width: 768px) {
+ .industrial-service {
+ flex-direction: column; /* Change to column layout on smaller screens */
+ }
+
+ .industrial-service .service-content,
+ .industrial-service .service-image {
+ text-align: center; /* Center align on smaller screens */
+ }
+}
+
+.service-content {
+ text-align: right; /* Align text to the right */
+}
+
+/* Media query for responsiveness */
+@media (max-width: 768px) {
+ .service-content {
+ text-align: left; /* Align text to the left on smaller screens */
+ }
+}
+.industrial-service {
+ display: flex; /* Use flexbox */
+ flex-direction: row; /* Arrange items in a row */
+ align-items: center; /* Center align items vertically */
+}
+
+.industrial-service .service-image {
+ flex: 1; /* Take up equal space */
+}
+
+.industrial-service .service-content {
+ flex: 1; /* Take up equal space */
+ text-align: right; /* Align text to the right */
+}
+
+/* Media query for responsiveness */
+@media (max-width: 768px) {
+ .industrial-service {
+ flex-direction: column; /* Change to column layout on smaller screens */
+ }
+
+ .industrial-service .service-content {
+ text-align: left; /* Align text to the left on smaller screens */
+ }
+}
+.industrial-service {
+ display: flex; /* Use flexbox */
+ flex-direction: row; /* Arrange items in a row */
+ align-items: center; /* Center align items vertically */
+}
+
+.industrial-service .service-image {
+ flex: 1; /* Take up equal space */
+}
+
+.industrial-service .service-content {
+ flex: 1; /* Take up equal space */
+ text-align: justify; /* Align text to justify */
+}
+
+/* Media query for responsiveness */
+@media (max-width: 768px) {
+ .industrial-service {
+ flex-direction: column; /* Change to column layout on smaller screens */
+ }
+
+ .industrial-service .service-content {
+ text-align: justify; /* Align text to justify on smaller screens */
+ }
+}
+
+--------
+/* Add specific styling for the "CAE Service" section */
+.service {
+ display: flex; /* Use flexbox */
+ flex-direction: row-reverse; /* Reverse the order of items in a row */
+ align-items: center; /* Center align items vertically */
+}
+
+.service .service-image {
+ flex: 1; /* Take up equal space */
+}
+
+.service .service-content {
+ flex: 1; /* Take up equal space */
+ text-align: left; /* Align text to the left */
+}
+
+/* Media query for responsiveness */
+@media (max-width: 768px) {
+ .service {
+ flex-direction: column; /* Change to column layout on smaller screens */
+ }
+
+ .service .service-content {
+ text-align: left; /* Align text to the left on smaller screens */
+ }
+}
+
+
+ </style>
+</head>
+<body>
+ <!-- Navigation bar with dropdowns -->
+ <div class="navbar">
+ <span class="toggle-nav"><i class="fas fa-bars"></i></span>
+ <div class="navbar-top">Binimaya Solutions Private Limited</div>
+ <div class="navbar-links">
+ <!-- Navigation links -->
+ <a href="#Home">Home</a>
+ <a href="About.html">About</a>
+
+ <!-- Engineering Service dropdown -->
+ <div class="dropdown">
+ <a href="#Engineering service">Engineering Service <i class="fas fa-caret-down"></i></a>
+ <div class="dropdown-menu">
+ <a href="Engineering and Product Development.html">Engineering and Product Development</a>
+ <a href="Design Service.html">Design Service</a>
+ <a href="CAE Service.html">CAE Service</a>
+ </div>
+ </div>
+
+ <!-- Manufacturing Service dropdown -->
+ <div class="dropdown">
+ <a href="Manufacturing service.html">Manufacturing Service <i class="fas fa-caret-down"></i></a>
+ <div class="dropdown-menu">
+ <a href="3D Printers.html">3D Printers</a>
+ <a href="3D Printing Services.html">3D Printing Services</a>
+ <a href="Manufacturing service.html">Manufacturing Software</a>
+ </div>
+ </div>
+
+ <!-- Training Service dropdown -->
+ <div class="dropdown">
+ <a href="Training.html">Training <i class="fas fa-caret-down"></i></a>
+ <div class="dropdown-menu">
+ <!-- CAD Training with nested dropdown -->
+ <div class="dropdown-item-with-submenu">
+ <a href="CAD Training">CAD Training <i class="fas fa-caret-right"></i></a>
+ <div class="dropdown-submenu">
+ <a href="Auto CAD.html">Auto CAD</a>
+ <a href="Solid Works.html">SolidWorks</a>
+ <a href="Siemens NX.html">Siemens NX</a>
+ </div>
+ </div>
+
+ <!-- CAE Services with nested dropdown -->
+ <div class="dropdown-item-with-submenu">
+ <a href="CAE Service">CAE Services <i class="fas fa-caret-right"></i></a>
+ <div class="dropdown-submenu">
+ <a href="Structural Analysis.html">Structural Analysis</a>
+ <a href="Multibody Dynamics.html">Multibody Dynamics</a>
+ <a href="Thermal Analysis.html">Thermal Analysis</a>
+ </div>
+ </div>
+
+ <!-- Direct links in the dropdown -->
+ <a href="BIM MEP Service.html">BIM MEP Service</a>
+ </div>
+ </div>
+
+ <!-- Other direct links -->
+ <a href="career.html">Careers</a>
+ <a href="Contact.html">Contact</a>
+ </div>
+ </div>
+
+ <!-- Image Section -->
+ <div class="image-section">
+ <button class="arrow left"><i class="fas fa-chevron-left"></i></button>
+ <img src="0.jpg" alt="Descriptive Alt Text" class="active">
+ <img src="10.jpg" alt="Descriptive Alt Text">
+ <img src="17.jpg" alt="Descriptive Alt Text">
+ <img src="18.jpg" alt="Descriptive Alt Text">
+ <img src="6.jpg" alt="Descriptive Alt Text">
+ <button class="arrow right"><i class="fas fa-chevron-right"></i></button>
+ </div>
+
+ <!-- Hero section -->
+ <div class="hero" id="home">
+ <p><b>Your trusted partner in engineering, manufacturing, training, and support services.</b></p>
+ </div>
+ 
+ <!-- Industrial service -->
+<div class="industrial-service">
+ <div class="service-image">
+ <img src="20.jpg" alt="Design Service">
+ </div>
+ <div class="service-content">
+ <h3>Industrial services</h3>
+ <p>Our design services cover all aspects of engineering design, ensuring that your products are innovative, functional, and aesthetically pleasing. Service design is a process where designers create sustainable solutions and optimal experiences for both customers in unique contexts and any service providers involved. Designers break services into sections and adapt fine-tuned solutions to suit all users’ needs in context based on actors, location and other factors.</p>
+ <p>Service design is a process where designers create sustainable solutions and optimal experiences for both customers in unique contexts and any service providers involved. Designers break services into sections and adapt fine-tuned solutions to suit all users’ needs in context based on actors, location and other factors.</p>
+ </div>
+</div>
+ 
+ <div class="service-image">
+ <img src="6.jpg" alt="CAE Service" style="max-width: 100%; height: auto;">
+ </div>
+ 
+
+
+ <footer class="site-footer">
+ <div class="container">
+ <div class="footer-content">
+ <div class="footer-logo">
+ <!-- You can add your logo here -->
+ </div>
+ <p>&copy; 2024 Binimaya Solutions Private Limited. Designed by <a href="https://mosys.org" target="_blank">Mosys</a></p>
+ <div class="social-links">
+ <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+ <a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+ <a href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+ <a href="https://www.youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+ </div>
+ </div>
+ </div>
+ </footer>
+ 
+
+ <script>
+ document.addEventListener("DOMContentLoaded", function() {
+ const toggleNav = document.querySelector('.toggle-nav');
+ const navbar = document.querySelector('.navbar');
+
+ toggleNav.addEventListener('click', function() {
+ navbar.classList.toggle('collapsed');
+ });
+
+ const dropdowns = document.querySelectorAll('.dropdown > a');
+ dropdowns.forEach(dropdown => {
+ dropdown.addEventListener('click', function(e) {
+ e.preventDefault();
+ this.parentElement.classList.toggle('active');
+ });
+ });
+
+ const submenus = document.querySelectorAll('.dropdown-item-with-submenu > a');
+ submenus.forEach(submenu => {
+ submenu.addEventListener('click', function(e) {
+ e.preventDefault();
+ this.parentElement.classList.toggle('active');
+ });
+ });
+
+ // Image slider functionality
+ const images = document.querySelectorAll('.image-section img');
+ let currentIndex = 0;
+
+ function showNextImage() {
+ images[currentIndex].classList.remove('active');
+ currentIndex = (currentIndex + 1) % images.length;
+ images[currentIndex].classList.add('active');
+ }
+
+ function showPreviousImage() {
+ images[currentIndex].classList.remove('active');
+ currentIndex = (currentIndex - 1 + images.length) % images.length;
+ images[currentIndex].classList.add('active');
+ }
+
+ document.querySelector('.arrow.right').addEventListener('click', showNextImage);
+ document.querySelector('.arrow.left').addEventListener('click', showPreviousImage);
+
+ setInterval(showNextImage, 3000);
+ });
+ </script>
+</body>
+</html>
+

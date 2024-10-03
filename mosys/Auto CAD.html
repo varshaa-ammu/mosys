@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CAD Training - BINIMAYA SOLUTIONS</title>
+    <link rel="stylesheet" href="styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- External styles for FontAwesome (social media icons) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        /* Styling for the header */
+        .site-header {
+            text-align: left; /* Align text to the left */
+            padding: 20px; /* Add padding to the header */
+        }
+
+        .site-header h1 {
+            margin: 0; /* Remove default margin for h1 */
+            color: #fff; /* Set text color to white */
+        }
+
+        .site-header p {
+            margin: 5px 0; /* Adjust margin for the paragraph */
+            color: #fff; /* Set text color to white */
+            text-decoration: none; /* Remove underline */
+        }
+
+        .service {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: row;
+        }
+
+        .service h3 {
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .service p {
+            margin-bottom: 10px;
+            color: #666;
+        }
+
+        .service .service-content {
+            flex: 1;
+            padding-right: 20px; /* Add some spacing between image and text on larger screens */
+        }
+
+        .service .service-image {
+            flex: 1;
+            text-align: right; /* Align image to the right */
+            margin-left: 20px; /* Add margin to the left of the image for spacing */
+        }
+
+        .service .service-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            object-fit: cover; /* Ensure the image fills its container */
+        }
+
+        /* Media queries for responsiveness */
+        @media (max-width: 768px) {
+            .service {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .service .service-image {
+                text-align: center;
+                margin-top: 20px;
+                margin-left: 0; /* Remove left margin on smaller screens */
+            }
+
+            .service .service-content {
+                padding-right: 20px; /* Remove right padding on smaller screens */
+                padding-left: 20px; /* Adjust left padding for consistency */
+            }
+        }
+
+        /* Adjust the color of "Mosys" in the footer to white */
+        .site-footer .footer-content p a {
+            color: #fff; /* Set the color to white */
+            text-decoration: none; /* Remove underline */
+        }
+
+        /* Ensure "Mosys" is visible on smaller screens */
+        @media (max-width: 768px) {
+            .site-footer .footer-content {
+                text-align: center; /* Center align the content */
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- Header -->
+<header class="site-header">
+    <div class="container">
+        <h1>CAD Training</h1>
+        <p><a href="Home.html" style="color: #fff; text-decoration: none;">Home</a> - Auto CAD</p>
+    </div>
+</header>
+
+<!-- Image Section -->
+<div class="image-section">
+    <img src="0.jpg" alt="Descriptive Alt Text">
+</div>
+
+<!-- Services Section -->
+<section class="services-section">
+    <div class="container">
+        <h2>Our Services</h2>
+
+        <!-- Auto CAD -->
+        <div class="service">
+            <div class="service-content">
+                <h3>Auto CAD</h3>
+                <p>AutoCAD may not be the pioneer of Computer Aided Design programs, but it is, certainly, the most recognized by far, to the point that it has become the undisputed reference, along with other programs from its own company, Autodesk, for architecture and engineering.If we had to define what AutoCAD is in a few words, we would say that it is a CAD-type software oriented to drawing and modeling in 2D and 3D. It allows the creation and modification of geometric models with an almost infinite capacity to develop all types of structures and objects.</p>
+            </div>
+            <div class="service-image">
+                <img src="21.jpg" alt="Environment and Product Development">
+            </div>
+        </div>
+
+        <!-- Solid Works -->
+        <div class="service service-design">
+            <div class="service-image">
+                <img src="22.jpg" alt="Design Service">
+            </div>
+            <div class="service-content">
+                <h3>AutoCAD design software</h3>
+                <p>Autodesk AutoCAD is computer-aided design software that allows you to efficiently create and document 2D and 3D designs. Industry-specific Autodesk tools, such as architecture, plant 3D, map 3D, MEP, electrical, mechanical and grid design, make Autodesk AutoCAD the number one software for architects, engineers and construction professionals.</p>
+                <p>You will see a big improvement in your workflow speed. You can, for example, retrieve and save files in less than half a second. CAD software allows you to work more quickly, more precisely and with a lower risk of errors.</p>
+                <p>Benefit from an ergonomic, modern interface and improve your 2D and 3D drawing processes. The developers of Autodesk AutoCAD have optimised the software in terms of productivity.</p>
+            </div>
+        </div>
+
+        <!-- Siemens NX -->
+        <div class="service">
+            <div class="service-content">
+                <h3>Wireframe Modeling</h3>
+                <p>Wireframe modeling is the process of visual presentation of a three-dimensional or physical object used in 3-D computer graphics. It is an abstract edge or skeletal representation of a real-world 3-D object using lines and curves. Because each object that makes up a wireframe model must be independently drawn and positioned, this type of modeling can be extremely time-consuming.</p>
+                <p>Wireframe modeling plays an important role in matching a 3-D drawing model to its reference. It allows a creator to see the reference through the model as well as match the vertex points so they are in alignment with the desired reference.</p>
+                <p>Wireframe modeling is a quick and easy way to demonstrate concepts. Creating a fully detailed, properly mapped mockup for a concept can be extremely time consuming, and if it does not match what was envisioned for the project, all that time and effort was wasted.</p>
+            </div>
+            <div class="service-image">
+                <img src="23.jpg" alt="CAE Service">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="site-footer">
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <!-- You can add your logo here -->
+            </div>
+            <p>&copy; 2024 Binimaya Solutions Private Limited. Designed by <a href="https://mosys.org" target="_blank" style="color: #fff; text-decoration: none;">Mosys</a></p>
+            <div class="social-links">
+                <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://www.youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- External scripts for FontAwesome (social media icons) -->
+<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+</body>
+</html>
+
