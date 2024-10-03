@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CAD Training - BINIMAYA SOLUTIONS</title>
+    <link rel="stylesheet" href="styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- External styles for FontAwesome (social media icons) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        /* Styling for the header */
+        .site-header {
+            text-align: left; /* Align text to the left */
+            padding: 20px; /* Add padding to the header */
+        }
+
+        .site-header h1 {
+            margin: 0; /* Remove default margin for h1 */
+        }
+
+        .site-header p {
+            margin: 5px 0; /* Adjust margin for the paragraph */
+            color: #fff; /* Set text color to white */
+            text-decoration: none; /* Remove underline */
+        }
+
+        .service {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: row;
+        }
+
+        .service h3 {
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .service p {
+            margin-bottom: 10px;
+            color: #666;
+        }
+
+        .service .service-content {
+            flex: 1;
+            padding-right: 20px; /* Add some spacing between image and text on larger screens */
+        }
+
+        .service .service-image {
+            flex: 1;
+            text-align: right; /* Align image to the right */
+            margin-left: 20px; /* Add margin to the left of the image for spacing */
+        }
+
+        .service .service-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            object-fit: cover; /* Ensure the image fills its container */
+        }
+
+        /* Media queries for responsiveness */
+        @media (max-width: 768px) {
+            .service {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .service .service-image {
+                text-align: center;
+                margin-top: 20px;
+                margin-left: 0; /* Remove left margin on smaller screens */
+            }
+
+            .service .service-content {
+                padding-right: 20px; /* Remove right padding on smaller screens */
+                padding-left: 20px; /* Adjust left padding for consistency */
+            }
+        }
+
+        /* Adjust the color of "Mosys" in the footer to white */
+        .site-footer .footer-content p a {
+            color: #fff; /* Set the color to white */
+            text-decoration: none; /* Remove underline */
+        }
+
+        /* Ensure "Mosys" is visible on smaller screens */
+        @media (max-width: 768px) {
+            .site-footer .footer-content {
+                text-align: center; /* Center align the content */
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- Header -->
+<header class="site-header">
+    <div class="container">
+        <h1>CAD Training</h1>
+        <p><a href="Home.html" style="color: #fff; text-decoration: none;">Home</a> - Solid Works</p>
+    </div>
+</header>
+
+<!-- Image Section -->
+<div class="image-section">
+    <img src="0.jpg" alt="Descriptive Alt Text">
+</div>
+
+<!-- Services Section -->
+<section class="services-section">
+    <div class="container">
+        <h2>Our Services</h2>
+
+        <!-- Auto CAD -->
+        <div class="service">
+            <div class="service-content">
+                <h3>SolidWorks Standard</h3>
+                <p>Unlock SOLIDWORKS powerful design capabilities and embrace the benefits of the 3D CAD with SOLIDWORKS Standard. Application specific tools allow for rapid creation of parts, assemblies and 2D drawings.</p>
+                <p>Application specific tools such as sheet metal, weldments, surfacing, and mould tool and die allow for rapid creation of complex parts, assemblies and 2D drawings.</p>
+                <p>Follow a series of available wizards to aid in the automation of designs and stress analysis as well as monitoring the environmental impact of products and their sustainability.</p>
+                <p>SOLIDWORKS CAM Standard lets you quickly program individual milled parts and configurations without leaving the SOLIDWORKS 3D CAD environment.  SOLIDWORKS CAM Standard is available to current Subscription Services members.</p>
+            </div>
+            <div class="service-image">
+                <img src="010.jpg" alt="Environment and Product Development">
+            </div>
+        </div>
+
+        <!-- Solid Works -->
+        <div class="service service-design">
+            <div class="service-image">
+                <img src="011.jpg" alt="Design Service">
+            </div>
+            <div class="service-content">
+                <h3>SolidWorks professional</h3>
+                <p>SOLIDWORKS Professional extends Standard's features with file management tools, automated cost estimation as well as photorealistic rendering and a sophisticated components library to name a few.</p>
+                <p>Standard parts and fasteners libraries alongside automated design and drawing checking allow for increased productivity whilst automated manufacturing estimates can save both time and money.</p>
+                <p>SOLIDWORKS Professional offers photorealistic rendering capabilities which can in turn be shared with other users regardless of their CAD skills with eDrawings® Professional collaboration capabilities.</p>
+            </div>
+        </div>
+
+        <!-- Siemens NX -->
+        <div class="service">
+            <div class="service-content">
+                <h3>SolidWorks Premium</h3>
+                <p>Building upon the capabilities of SOLIDWORKS Professional, SOLIDWORKS Premium integrates powerful simulation analysis, design validation, ECAD/MCAD collaboration, reverse engineering, and advanced wire and pipe routing functionality to its list of capabilities.</p>
+                <p>Advanced simulation capabilities allow users to analyse product performance in real world scenarios, motion and forces. Resolve any potential manufacturability issues prior to production with tolerance stack-up analysis tools which can be used throughout the design process.</p>
+                <p>Printed circuit board data can be added to your 3D model in a matter of moments with the capability to produce and document layouts for electrical wiring, piping, and tubing. SOLIDWORKS Premium also offers the chance to utilise 3D scanned data within the software.</p>
+            </div>
+            <div class="service-image">
+                <img src="012.jpg" alt="CAE Service">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="site-footer">
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <!-- You can add your logo here -->
+            </div>
+            <p>&copy; 2024 Binimaya Solutions Private Limited. Designed by <a href="https://mosys.org" target="_blank">Mosys</a></p>
+            <div class="social-links">
+                <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://www.youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- External scripts for FontAwesome (social media icons) -->
+<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+</body>
+</html>
+

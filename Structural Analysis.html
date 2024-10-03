@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CAE Service - BINIMAYA SOLUTIONS</title>
+    <link rel="stylesheet" href="styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- External styles for FontAwesome (social media icons) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        /* Styling for the header */
+        .site-header {
+            text-align: left; /* Align text to the left */
+            padding: 20px; /* Add padding to the header */
+            background-color: #333;
+            color: #fff;
+        }
+
+        .site-header h1 {
+            margin: 0; /* Remove default margin for h1 */
+        }
+
+        .site-header p {
+            margin: 5px 0; /* Adjust margin for the paragraph */
+        }
+
+        .site-header a {
+            color: #fff; /* Set link color to white */
+            text-decoration: none; /* Remove underline */
+        }
+
+        .site-header a:hover {
+            color: #ddd; /* Change color on hover */
+        }
+
+        .service {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: row;
+        }
+
+        .service h3 {
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .service p {
+            margin-bottom: 10px;
+            color: #666;
+        }
+
+        .service .service-content {
+            flex: 1;
+            padding-right: 20px; /* Add some spacing between image and text on larger screens */
+        }
+
+        .service .service-image {
+            flex: 1;
+            text-align: right; /* Align image to the right */
+            margin-left: 20px; /* Add margin to the left of the image for spacing */
+        }
+
+        .service .service-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            object-fit: cover; /* Ensure the image fills its container */
+        }
+
+        /* Media queries for responsiveness */
+        @media (max-width: 768px) {
+            .service {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .service .service-image {
+                text-align: center;
+                margin-top: 20px;
+                margin-left: 0; /* Remove left margin on smaller screens */
+            }
+
+            .service .service-content {
+                padding-right: 20px; /* Remove right padding on smaller screens */
+                padding-left: 20px; /* Adjust left padding for consistency */
+            }
+        }
+
+        /* Adjust the color of "Mosys" in the footer to white */
+        .site-footer .footer-content p a {
+            color: #fff; /* Set the color to white */
+            text-decoration: none; /* Remove underline */
+        }
+
+        /* Ensure "Mosys" is visible on smaller screens */
+        @media (max-width: 768px) {
+            .site-footer .footer-content {
+                text-align: center; /* Center align the content */
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- Header -->
+<header class="site-header">
+    <div class="container">
+        <h1>CAE Service</h1>
+        <p><a href="Home.html">Home</a> - Structural Analysis</p>
+    </div>
+</header>
+
+<!-- Image Section -->
+<div class="image-section">
+    <img src="0.jpg" alt="Descriptive Alt Text">
+</div>
+
+<!-- Services Section -->
+<section class="services-section">
+    <div class="container">
+        <h2>Our Services</h2>
+
+        <!--Structural Analysis -->
+        <div class="service">
+            <div class="service-content">
+                <h3>Structural Analysis</h3>
+                <p>All structural design services companies start by simulating a geometric model of the product. This model needs to be meshable into a correct finite element mesh. This is done in order to ensure that the CAD geometry will mesh and will provide important data like stresses, displacements or temperature distribution with accepted accuracy.Structural analysis of a product is an iterative process. The structural analyst creates a discrete geometric model based on the designer's inputs and by using some CAE software tools. The designer then validates the products based on the simulation results.</p>
+                <p>After optimization, the product design is again sent to the structural analyst, and the cycle continues. While a few companies have in-house CAD / CAE designers, they are not in a position to purchase the latest CAE software required for the structural analysis. This is where they outsource the structural analysis process to companies that have this expertise.</p>
+            </div>
+            <div class="service-image">
+                <img src="24.jpg" alt="Environment and Product Development">
+            </div>
+        </div>
+
+        <!-- Multibody Dynamics -->
+        <div class="service service-design">
+            <div class="service-image">
+                <img src="04.jpg" alt="Design Service">
+            </div>
+            <div class="service-content">
+                <h3>Computer Aided Analysis</h3>
+                <p>Computer Aided Analysis programs requires good knowledge of the molding process and of the assumptions made in the computer analysis programs in order to obtain reasonably accurate results. Probably the most basic assumptions deal with the relationship between pressure, temperature, and volume.</p>
+                <p>These relationships are well known and documented for relatively slow cooling rates, say five degrees per minute. The relationships between these variables at cooling rates of perhaps hundreds of degrees per minute are not commonly available. </p>
+                <p>These three variables are the most prominent of the variables to be considered, but there are approximately thirty total variables.
+
+                    Most finite-element–based analysis programs use what are called midplane analysis techniques.</p>
+            </div>
+        </div>
+
+        <!-- Thermal Analysis -->
+        <div class="service">
+            <div class="service-content">
+                <h3>Car crash Analysis</h3>
+                <p>Car crash simulations are few of the most critical simulations at Vehicle Integration level in the development cycle. Meeting crash requirements as per different Vehicle Safety Standards (FMVSS, NCAP, EC, Japanese- NCAP) is a compliance aspect to deliver a safe car to the end customers.</p>
+                <p>There are different types of crash simulations like full frontal, side, rear, rollover at vehicle level and like Crash Management System (CMS), seating, interior crash at system level.</p>
+                <p>Other applications – drop testing, forming simulation, shock loads</p>
+            </div>
+            <div class="service-image">
+                <img src="25.jpg" alt="CAE Service">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="site-footer">
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <!-- You can add your logo here -->
+            </div>
+            <p>&copy; 2024 Binimaya Solutions Private Limited. Designed by <a href="https://mosys.org" target="_blank">Mosys</a></p>
+            <div class="social-links">
+                <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://www.youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- External scripts for FontAwesome (social media icons) -->
+<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+</body>
+</html>
+
