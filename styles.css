@@ -1,0 +1,947 @@
+sign in page......
+/* Basic styling for the whole page */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5; /* Light background for the page */
+}
+
+/* Center the sign-up container and style it */
+.signup-container {
+    max-width: 400px; /* Maximum width for the container */
+    margin: 100px auto; /* Center the container vertically and horizontally */
+    padding: 20px; /* Padding inside the container */
+    background-color: white; /* White background */
+    border: 1px solid #ddd; /* Light border */
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    text-align: center; /* Center-align text */
+}
+
+/* Styling for form elements */
+.signup-container input {
+    width: 100%; /* Full width for inputs */
+    padding: 10px; /* Padding inside inputs */
+    margin-bottom: 10px; /* Space between inputs */
+    border: 1px solid #ccc; /* Light border */
+    border-radius: 4px; /* Rounded corners */
+    box-sizing: border-box; /* Ensure padding doesn't affect width */
+}
+
+.signup-container button {
+    padding: 10px 20px; /* Padding for the button */
+    border: none; /* No border */
+    background-color: #333; /* Dark background color */
+    color: white; /* White text */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+.signup-container button:hover {
+    background-color: #555; /* Darker background on hover */
+}
+
+/* Styling for the link */
+.signup-container a {
+    display: block; /* Display links as block elements */
+    margin-top: 10px; /* Space between the form and the link */
+    color: #333; /* Dark text */
+    text-decoration: none; /* No underline */
+}
+
+.signup-container a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+/* Media queries for mobile responsiveness */
+@media (max-width: 600px) {
+    /* Adjustments for smaller screens */
+    .signup-container {
+        margin: 50px auto; /* Smaller top margin */
+        padding: 15px; /* Smaller padding */
+    }
+
+    .signup-container button {
+        padding: 10px; /* Smaller padding */
+        font-size: 1em; /* Adjust font size */
+    }
+}
+
+--------------------
+Index page code.......
+---------------------
+/* Basic styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5; /* Light background for the page */
+}
+
+/* Center the login container */
+.login-container {
+    max-width: 400px; /* Maximum width for desktop */
+    margin: 100px auto; /* Center the container */
+    padding: 20px;
+    background-color: white; /* White background for the login form */
+    border: 1px solid #ddd;
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Light shadow */
+    text-align: center; /* Center-align text */
+}
+
+/* Form elements */
+.login-container input {
+    width: 100%; /* Full width for inputs */
+    padding: 10px;
+    margin-bottom: 10px; /* Spacing between inputs */
+    border: 1px solid #ccc; /* Light border */
+    border-radius: 4px; /* Rounded corners */
+    box-sizing: border-box; /* Ensure padding is included in width */
+}
+
+.login-container button {
+    padding: 10px 20px;
+    border: none; /* No border */
+    background-color: #333; /* Dark background */
+    color: white; /* White text */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+.login-container button:hover {
+    background-color: #555; /* Darker background on hover */
+}
+
+/* Links */
+.login-container a {
+    display: block; /* Display links as block elements */
+    margin-top: 10px; /* Spacing between links */
+    color: #333; /* Dark text */
+    text-decoration: none; /* No underline */
+}
+
+.login-container a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+/* Media queries for mobile responsiveness */
+@media (max-width: 600px) {
+    /* Adjust margin for smaller screens */
+    .login-container {
+        margin: 50px auto; /* Reduce top margin */
+        padding: 15px; /* Smaller padding */
+    }
+
+    /* Adjust button size for smaller screens */
+    .login-container button {
+        padding: 10px; /* Smaller padding */
+        font-size: 1em; /* Adjust font size */
+    }
+}
+
+
+
+
+-----------
+
+/* General CSS for the website */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: #f5f5f5;
+    color: #333;
+}
+
+.navbar {
+    background: #333;
+    color: white;
+    padding: 0.5rem 1rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap; /* Allow elements to wrap for smaller screens */
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    transition: background 0.3s;
+}
+
+.navbar a:hover {
+    background: #555;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown .dropdown-menu {
+    display: none; /* Hidden by default */
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #333;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    z-index: 1000;
+}
+
+.dropdown .dropdown-menu a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem;
+    display: block;
+    transition: background 0.3s;
+}
+
+.dropdown .dropdown-menu a:hover {
+    background: #555;
+}
+
+/* Show dropdown on hover */
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.sub-dropdown {
+    position: relative;
+}
+
+.sub-dropdown .dropdown-menu {
+    top: 0;
+    left: 100%; /* Align the sub-menu to the right of the main menu */
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column; /* Stack navigation vertically */
+    }
+
+    .dropdown .dropdown-menu {
+        position: relative; /* For proper stacking on smaller screens */
+    }
+
+    .sub-dropdown .dropdown-menu {
+        left: 0; /* Adjust for smaller screens */
+    }
+}
+
+.hero {
+    background: #4A90E2;
+    color: white;
+    padding: 3rem 1rem;
+    text-align: center;
+}
+
+.site-footer {
+    background: #333; /* Dark background */
+    color: white;
+    padding: 20px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.footer-column {
+    flex: 1;
+    margin: 10px;
+}
+
+.footer-column h3 {
+    color: white;
+}
+
+.footer-column ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin: 5px 0;
+}
+
+.footer-column ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer-column form {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-column form input {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+.footer-column form button {
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #555;
+    color: white;
+    cursor: pointer;
+    border: none;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space
+}
+/* Base dropdown menu style */
+.dropdown {
+    position: relative;
+}
+
+.dropdown .dropdown-menu {
+    display: none; /* Hidden by default */
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #333;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    z-index: 1000;
+}
+
+.dropdown .dropdown-menu a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem;
+    display: block;
+    transition: background 0.3s;
+}
+
+.dropdown .dropdown-menu a:hover {
+    background: #555;
+}
+
+/* Show dropdown on hover */
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+/* Style for sub-dropdowns within dropdowns */
+.dropdown-item-with-submenu {
+    position: relative; /* Relative to allow absolute positioning of sub-dropdown */
+}
+
+.dropdown-item-with-submenu .dropdown-submenu {
+    display: none; /* Hidden by default */
+    position: absolute;
+    top: 0;
+    left: 100%; /* Align sub-dropdown to the right of the parent dropdown */
+    background: #333;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+}
+
+.dropdown-item-with-submenu .dropdown-submenu a {
+    padding: 0.5rem;
+    text-decoration: none;
+    color: white;
+}
+
+.dropdown-item-with-submenu .dropdown-submenu a:hover {
+    background: #555;
+}
+
+/* Show sub-dropdown on hover */
+.dropdown-item-with-submenu:hover .dropdown-submenu {
+    display: block; /* Display sub-dropdown on hover */
+}
+
+/* Responsive design considerations */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column; /* Stack navigation vertically */
+    }
+
+    /* Sub-dropdowns position relative in smaller screens */
+    .dropdown .dropdown-menu {
+        position: relative; /* Relative for proper stacking */
+    }
+
+    .dropdown-item-with-submenu .dropdown-submenu {
+        position: relative;
+        top: auto;
+        left: 0; /* Ensure proper alignment on smaller screens */
+    }
+}
+.social-media {
+    display: flex;
+    gap: 10px; /* Spacing between links */
+}
+
+.social-media a {
+    color: blue; /* Default link color */
+    text-decoration: none; /* No underline by default */
+    transition: color 0.3s; /* Smooth transition on hover */
+}
+
+.social-media a:hover {
+    color: darkblue; /* Change color on hover */
+}
+
+.company-details {
+    background: #f9f9f9; /* Light background for contrast */
+    padding: 2rem; /* Padding around the section */
+    text-align: center; /* Center align the content */
+}
+
+.company-details .container {
+    max-width: 800px; /* Limit the width of the content */
+    margin: 0 auto; /* Center the content */
+}
+
+.company-details h2 {
+    font-size: 2rem; /* Larger font for headings */
+    color: #333; /* Dark text color */
+}
+
+.company-details p {
+    font-size: 1rem; /* Normal font size for paragraphs */
+    color: #555; /* Slightly lighter color for readability */
+    line-height: 1.5; /* Spacing between lines */
+    margin: 1rem 0; /* Spacing between paragraphs */
+}
+
+.navbar {
+    background: #333; /* Dark background for navbar */
+    color: white;
+    padding: 0.5rem 1rem; /* Padding for spacing */
+    display: flex;
+    justify-content: flex-start; /* Ensure navigation items align to the left */
+    align-items: center;
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem; /* Padding for link spacing */
+    transition: background 0.3s; /* Smooth transition on hover */
+}
+
+.navbar a:hover {
+    background: #555; /* Darker background on hover */
+}
+
+.search-bar {
+    margin-left: auto; /* Aligns the search bar to the far right */
+    padding: 0.5rem; /* Padding for consistent alignment */
+}
+
+.search-bar input {
+    padding: 0.5rem; /* Padding inside the input box */
+    border: 1px solid #ccc; /* Light border for the input box */
+    border-radius: 4px; /* Rounded corners */
+    outline: none; /* No outline when focused */
+    color: #333; /* Text color inside the input box */
+    background: #fff; /* White background for input box */
+    transition: background 0.3s; /* Smooth transition for hover effects */
+}
+
+.search-bar input:hover {
+    background: #f0f0f0; /* Light gray background on hover */
+}/* General CSS for the website */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: #f5f5f5;
+    color: #333;
+}
+
+.navbar {
+    background: #333;
+    color: white;
+    padding: 0.5rem 1rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap; /* Allow elements to wrap for smaller screens */
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    transition: background 0.3s;
+}
+
+.navbar a:hover {
+    background: #555;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown .dropdown-menu {
+    display: none; /* Hidden by default */
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #333;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    z-index: 1000;
+}
+
+.dropdown .dropdown-menu a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem;
+    display: block;
+    transition: background 0.3s;
+}
+
+.dropdown .dropdown-menu a:hover {
+    background: #555;
+}
+
+/* Show dropdown on hover */
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.sub-dropdown {
+    position: relative;
+}
+
+.sub-dropdown .dropdown-menu {
+    top: 0;
+    left: 100%; /* Align the sub-menu to the right of the main menu */
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column; /* Stack navigation vertically */
+    }
+
+    .dropdown .dropdown-menu {
+        position: relative; /* For proper stacking on smaller screens */
+    }
+
+    .sub-dropdown .dropdown-menu {
+        left: 0; /* Adjust for smaller screens */
+    }
+}
+
+.hero {
+    background: #4A90E2;
+    color: white;
+    padding: 3rem 1rem;
+    text-align: center;
+}
+
+.site-footer {
+    background: #333; /* Dark background */
+    color: white;
+    padding: 20px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.footer-column {
+    flex: 1;
+    margin: 10px;
+}
+
+.footer-column h3 {
+    color: white;
+}
+
+.footer-column ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin: 5px 0;
+}
+
+.footer-column ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer-column form {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-column form input {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+.footer-column form button {
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #555;
+    color: white;
+    cursor: pointer;
+    border: none;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space
+}
+/* Base dropdown menu style */
+.dropdown {
+    position: relative;
+}
+
+.dropdown .dropdown-menu {
+    display: none; /* Hidden by default */
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #333;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    z-index: 1000;
+}
+
+.dropdown .dropdown-menu a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem;
+    display: block;
+    transition: background 0.3s;
+}
+
+.dropdown .dropdown-menu a:hover {
+    background: #555;
+}
+
+/* Show dropdown on hover */
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+/* Style for sub-dropdowns within dropdowns */
+.dropdown-item-with-submenu {
+    position: relative; /* Relative to allow absolute positioning of sub-dropdown */
+}
+
+.dropdown-item-with-submenu .dropdown-submenu {
+    display: none; /* Hidden by default */
+    position: absolute;
+    top: 0;
+    left: 100%; /* Align sub-dropdown to the right of the parent dropdown */
+    background: #333;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+}
+
+.dropdown-item-with-submenu .dropdown-submenu a {
+    padding: 0.5rem;
+    text-decoration: none;
+    color: white;
+}
+
+.dropdown-item-with-submenu .dropdown-submenu a:hover {
+    background: #555;
+}
+
+/* Show sub-dropdown on hover */
+.dropdown-item-with-submenu:hover .dropdown-submenu {
+    display: block; /* Display sub-dropdown on hover */
+}
+
+/* Responsive design considerations */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column; /* Stack navigation vertically */
+    }
+
+    /* Sub-dropdowns position relative in smaller screens */
+    .dropdown .dropdown-menu {
+        position: relative; /* Relative for proper stacking */
+    }
+
+    .dropdown-item-with-submenu .dropdown-submenu {
+        position: relative;
+        top: auto;
+        left: 0; /* Ensure proper alignment on smaller screens */
+    }
+}
+.social-media {
+    display: flex;
+    gap: 10px; /* Spacing between links */
+}
+
+.social-media a {
+    color: blue; /* Default link color */
+    text-decoration: none; /* No underline by default */
+    transition: color 0.3s; /* Smooth transition on hover */
+}
+
+.social-media a:hover {
+    color: darkblue; /* Change color on hover */
+}
+
+.company-details {
+    background: #f9f9f9; /* Light background for contrast */
+    padding: 2rem; /* Padding around the section */
+    text-align: center; /* Center align the content */
+}
+
+.company-details .container {
+    max-width: 800px; /* Limit the width of the content */
+    margin: 0 auto; /* Center the content */
+}
+
+.company-details h2 {
+    font-size: 2rem; /* Larger font for headings */
+    color: #333; /* Dark text color */
+}
+
+.company-details p {
+    font-size: 1rem; /* Normal font size for paragraphs */
+    color: #555; /* Slightly lighter color for readability */
+    line-height: 1.5; /* Spacing between lines */
+    margin: 1rem 0; /* Spacing between paragraphs */
+}
+
+.navbar {
+    background: #333; /* Dark background for navbar */
+    color: white;
+    padding: 0.5rem 1rem; /* Padding for spacing */
+    display: flex;
+    justify-content: flex-start; /* Ensure navigation items align to the left */
+    align-items: center;
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem; /* Padding for link spacing */
+    transition: background 0.3s; /* Smooth transition on hover */
+}
+
+.navbar a:hover {
+    background: #555; /* Darker background on hover */
+}
+
+.search-bar {
+    margin-left: auto; /* Aligns the search bar to the far right */
+    padding: 0.5rem; /* Padding for consistent alignment */
+}
+
+.search-bar input {
+    padding: 0.5rem; /* Padding inside the input box */
+    border: 1px solid #ccc; /* Light border for the input box */
+    border-radius: 4px; /* Rounded corners */
+    outline: none; /* No outline when focused */
+    color: #333; /* Text color inside the input box */
+    background: #fff; /* White background for input box */
+    transition: background 0.3s; /* Smooth transition for hover effects */
+}
+
+.search-bar input:hover {
+    background: #f0f0f0; /* Light gray background on hover */
+}
+-------------------
+
+About us
+/* General styling */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 1200px; /* Max width for large screens */
+    margin: 0 auto; /* Center-align content */
+    padding: 0 15px; /* Inner padding */
+}
+
+/* About Us section styling */
+.about-us {
+    padding: 40px 0; /* Padding for the section */
+}
+
+.about-us h2 {
+    font-size: 28px; /* Large font for heading */
+    color: #333; /* Dark color for heading */
+}
+
+.about-us p {
+    color: #555; /* Medium gray for paragraph text */
+    font-size: 16px; /* Font size for text */
+    line-height: 1.5; /* Line spacing for better readability */
+}
+
+.about-us ul {
+    list-style-type: square; /* Square bullets */
+    padding-left: 20px; /* Padding for indentation */
+}
+
+.about-us ul li {
+    padding: 5px 0; /* Spacing between list items */
+}
+
+/* Footer section styling */
+
+
+.logo-image {
+    max-width: 100px; /* Adjust based on your logo size */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.social-links {
+    margin-top: 10px;
+}
+
+.social-links a {
+    margin: 0 10px;
+    color: #fff;
+    text-decoration: none;
+}
+
+@media (min-width: 768px) {
+    .footer-content {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .footer-logo {
+        margin-bottom: 0;
+    }
+
+    .social-links {
+        margin-top: 0;
+    }
+}
+
+
+.social-links {
+    display: flex; /* Flex layout */
+    justify-content: center; /* Center-align social links */
+}
+
+.social-links a {
+    text-decoration: none; /* No underline */
+    color: white; /* White text */
+    margin: 0 10px; /* Spacing between links */
+}
+
+.social-links a:hover {
+    color: #FFD700; /* Gold on hover */
+}
+
+/* Responsive design adjustments */
+@media (max-width: 768px) { /* For screens smaller than 768px */
+    .footer-content {
+        flex-direction: column; /* Vertical layout for footer content */
+        align-items: center; /* Center-align content */
+    }
+}
+----------------
+
+career page
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.site-header {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 30px;
+}
+
+.job-openings {
+    background-color: #f1f1f1;
+    padding: 30px 0;
+}
+
+.job {
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: white;
+}
+
+.job h3 {
+    margin: 0 0 10px;
+}
+
+.apply-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.apply-btn:hover {
+    background-color: #2980b9;
+}
+
+.site-footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.social-links {
+    margin-top: 10px;
+}
+
+.social-links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: #3498db;
+}
+
+/* Styling for the Image Section */
+.image-section {
+    text-align: center; /* Center the image */
+    margin: 20px 0; /* Space around the image */
+}
+
+.image-section img {
+    width: 100%; /* Make the image responsive */
+    height: 65vh; /* Set height to 65% of the viewport height */
+    object-fit: cover; /* Cover the area, cropping if necessary */
+}
